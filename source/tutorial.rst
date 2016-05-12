@@ -129,8 +129,11 @@ build, run the following inside vagrant:
 
 .. code-block:: console
 
+  $ sudo apt-get update
+  $ sudo apt-get install python-setuptools swig g++ python-dev libcrypto++-dev libjson-c-dev
   $ cd /project/sawtooth-core
   $ python setup.py build
+  $ python setup.py install
 
 Running txnvalidator
 ====================
@@ -141,6 +144,8 @@ and run the following command:
 .. code-block:: console
 
    $ cd /project/sawtooth-validator
+   $ python setup.py build
+   $ python setup.py install
    $ ./bin/txnvalidator -v --http 8800
 
 This will startup txnvalidator and logging output will be printed to the
